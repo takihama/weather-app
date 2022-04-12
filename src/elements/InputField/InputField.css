@@ -1,0 +1,14 @@
+.input-field {
+  display: flex;
+  padding: 0 10px 0 30px;
+  border: 0px;
+  width: 100%;
+  flex: 1 100%;
+  background: inherit;
+  color: white;
+}
+
+.input-field:focus{
+  outline: none;
+  color: gray;
+}

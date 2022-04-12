@@ -1,0 +1,5 @@
+.weather-condition {
+  text-transform: upperCase;
+  font-size: 35px;
+  font-weight: 200;
+}
