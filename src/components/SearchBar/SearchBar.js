@@ -1,10 +1,10 @@
 import './SearchBar.css'
 
-const SearchBar = () => {
+const SearchBar = ({ filterText, searchBarHandler, searchButtonHandler }) => {
   return (
     <div className='search-card'>
-      <input type="text" placeholder="Search..." class="input-field"></input>
-      <button type="submit" class="search-button">Set</button>
+      <input type="text" value={filterText} onChange={searchBarHandler} placeholder="Search..." className="input-field"></input>
+      <button type="submit" className="search-button" onClick={searchButtonHandler}>Set</button>
     </div>
   )
 }

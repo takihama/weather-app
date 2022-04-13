@@ -1,25 +1,25 @@
 import './WeatherCard.css'
 
-const WeatherCard = () => {
+const WeatherCard = ({ weatherDetails }) => {
   return (
     <div className="weather-card">
       <div className='top-div'>
-        <i className='icon wi wi-night-sleet'></i>
+        <i className='icon wi'></i>
       </div>
       <div className='bottom-left-div'>
-        <div class="temperature">25&deg;</div>
+        <div className="temperature">{weatherDetails.temperature !== '' ? weatherDetails.temperature + '\xb0' : '\xa0'}</div>
       </div>
       <div className='bottom-middle-div'>
         <div className='weather-condition'>
-          Cloudy
+          {weatherDetails.condition}
         </div>
         <div className='place'>
-          New York, New York
+          {weatherDetails.place}
         </div>
       </div>
       <div className='bottom-right-div'>
         <div className='date'>
-          1st Jan
+          {weatherDetails.date}
         </div>
       </div>
     </div>
