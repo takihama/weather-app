@@ -7,6 +7,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 
 import { useState } from 'react';
 import axios from 'axios'
+import PreviewCard from '../../components/PreviewCard/PreviewCard';
 
 const App = () => {
   const weather_api_key = process.env.REACT_APP_WEATHER_API_KEY
@@ -21,7 +22,7 @@ const App = () => {
       icon: ''
     },
     loading: false,
-    error: 200
+    error: ''
   })
 
   const searchBarHandler = (event) => {
@@ -58,7 +59,7 @@ const App = () => {
             icon: weatherIcon
           },
           loading: false,
-          error: 200
+          error: response.status
         })
       })
       .catch(err => {
@@ -71,12 +72,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className='center-card'>{}
+      <div className='center-card'>
         <SearchBar filterText={weatherState.searchBarInput} searchBarHandler={searchBarHandler} searchButtonHandler={() => searchWeatherInfo()} />
-        {weatherState.error === 200 ?
-          !weatherState.loading ? <WeatherCard weatherDetails={weatherState.weatherDetails} /> :
-            <LoadingCard /> :
-          <ErrorCard statusCode={weatherState.error}/>
+
+        {weatherState.error === '' ?
+          <PreviewCard /> :
+          weatherState.error === 200 ?
+            !weatherState.loading ?
+              <WeatherCard weatherDetails={weatherState.weatherDetails} /> :
+              <LoadingCard /> :
+            <ErrorCard statusCode={weatherState.error} />
         }
       </div>
     </div>

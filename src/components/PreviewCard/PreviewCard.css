@@ -1,0 +1,11 @@
+.preview-card {
+  display: flex;
+  flex-flow: row wrap;
+  height: 300px;
+  width: 600px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #3b4580;
+  align-items: center;
+  justify-content: center;
+}
