@@ -1,26 +1,16 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
 .weather-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-flow: row wrap;
   height: 300px;
   width: 600px;
-  border-radius: 20px;
-  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .top-div {
   display: flex;
-  flex: 0 100%;
-  height: 10%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background: #0D0F1C;
-}
-
-.middle-div {
   flex: 0 100%;
   height: 60%;
   background-color: #53354A;
@@ -31,8 +21,8 @@
 
 .bottom-left-div {
   display: flex;
-  flex: 0 30%;
-  height: 30%;
+  flex: 3;
+  height: 40%;
   align-items: center;
   justify-content: center;
   background-color: #A64942;
@@ -42,9 +32,9 @@
 
 .bottom-middle-div {
   display: flex;
-  flex: 0 40%;
+  flex: 4;
   flex-flow: column wrap;
-  height: 30%;
+  height: 40%;
   align-items: center;
   justify-content: center;
   background-color: #A64942;
@@ -53,11 +43,37 @@
 
 .bottom-right-div {
   display: flex;
-  flex: 0 30%;
-  height: 30%;
+  flex: 3;
+  height: 40%;
   background-color: #FF7844;
   border-bottom-right-radius: 20px;
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.temperature {
+  font-size: 65px;
+  font-weight: 800;
+}
+
+.place {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.date {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.weather-condition {
+  text-transform: upperCase;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.icon {
+  color: white;
+  font-size: 100px;
 }

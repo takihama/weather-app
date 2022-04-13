@@ -1,29 +1,26 @@
-import Date from './Date/Date'
-import Icon from '../../elements/Icon/Icon'
-import Place from './/Place/Place'
-import SearchBar from './SearchBar/SearchBar'
-import Temperature from './/Temperature/Temperature'
-import WeatherCondition from './/WeatherCondition/WeatherCondition'
 import './WeatherCard.css'
 
 const WeatherCard = () => {
   return (
     <div className="weather-card">
-      <div className="top-div">
-        <SearchBar/>
-      </div>
-      <div className='middle-div'>
-        <Icon/>
+      <div className='top-div'>
+        <i className='icon wi wi-night-sleet'></i>
       </div>
       <div className='bottom-left-div'>
-        <Temperature/>
+        <div class="temperature">25&deg;</div>
       </div>
       <div className='bottom-middle-div'>
-        <WeatherCondition/>
-        <Place/>
+        <div className='weather-condition'>
+          Cloudy
+        </div>
+        <div className='place'>
+          New York, New York
+        </div>
       </div>
       <div className='bottom-right-div'>
-        <Date/>
+        <div className='date'>
+          1st Jan
+        </div>
       </div>
     </div>
   )

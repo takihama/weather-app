@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
 .App {
+  display: flex;
   position: absolute;
+  flex-flow: column wrap;
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
   background: #1B1F3A;
   font-family: Poiret One;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
