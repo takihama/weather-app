@@ -16,12 +16,13 @@
   border: 0px;
   border-top-left-radius: inherit;
   background: inherit;
+  font-size: 18px;
   color: white;
 }
 
 .input-field:focus{
   outline: none;
-  color: gray;
+  color: white;
 }
 
 .search-button {
@@ -32,7 +33,7 @@
   background: inherit;
   border: 0px;
   border-top-right-radius: inherit;
-  font-size: 14px;
+  font-size: 18px;
   color: white;
   cursor: pointer;
 }

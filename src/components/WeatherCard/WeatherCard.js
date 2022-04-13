@@ -4,7 +4,7 @@ const WeatherCard = ({ weatherDetails }) => {
   return (
     <div className="weather-card">
       <div className='top-div'>
-        <i className='icon wi'></i>
+        <img src={weatherDetails.icon} alt={weatherDetails.condition} width="200px"/>
       </div>
       <div className='bottom-left-div'>
         <div className="temperature">{weatherDetails.temperature !== '' ? weatherDetails.temperature + '\xb0' : '\xa0'}</div>
