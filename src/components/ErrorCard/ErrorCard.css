@@ -1,23 +1,12 @@
 .error-card {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap;  
   height: 300px;
   width: 600px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   background-color: #973C37;
 }
-/* 
-.status-error {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  font-size: 96px;
-  font-weight: bolder;
-  color: lightgray;
-  border-bottom-left-radius: 20px;
-} */
 
 .message-error {
   display: flex;
@@ -25,7 +14,15 @@
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 24px;
+  padding: 1em;
+  font-size: 1.7em;
   font-weight: 800;
   border-bottom-right-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .error-card {
+    max-height: 280px;
+    max-width: 400px;
+  }
 }

@@ -52,27 +52,37 @@
 }
 
 .temperature {
-  font-size: 65px;
+  font-size: 3.5em;
   font-weight: 800;
 }
 
 .place {
-  font-size: 22px;
+  padding: 0.1em;
+  font-size: 1.3em;
   font-weight: 100;
 }
 
 .date {
-  font-size: 36px;
+  padding: 1em;
+  font-size: 2em;
   font-weight: 800;
 }
 
 .weather-condition {
   text-transform: upperCase;
-  font-size: 35px;
-  font-weight: 200;
+  padding: 0.1em;
+  font-size: 1.6em;
+  font-weight: 400;
 }
 
 .icon {
   color: white;
   font-size: 100px;
+}
+
+@media only screen and (max-width:600px) {
+  .weather-card {
+    max-height: 280px;
+    max-width: 400px;    
+  }
 }
